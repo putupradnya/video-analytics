@@ -10,6 +10,10 @@ import os
 from io import BytesIO
 from scipy.spatial import distance
 from scipy.optimize import linear_sum_assignment
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # **🔹 Konfigurasi AWS S3**
 S3_BUCKET_NAME = "demo-jsc"

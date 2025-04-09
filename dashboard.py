@@ -64,9 +64,9 @@ with col3:
 # **🔹 Load Model**
 if selected_model == "YOLOv8n":
     model = YOLO("yolov8n.pt")
-    model.to("mps") 
+    # model.to("mps") 
 else:
-    net = cv2.dnn.readNetFromCaffe("models/deploy.prototxt", "models/mobilenet_iter_73000.caffemodel")
+    net = cv2.dnn.readNetFromCaffe("sample/deploy.prototxt", "sample/mobilenet_iter_73000.caffemodel")
     net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
     net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
